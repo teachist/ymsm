@@ -1,0 +1,13 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "student_management_area" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(20) NOT NULL, "parent_id" integer NULL REFERENCES "student_management_area" ("id") DEFERRABLE INITIALLY DEFERRED);
+INSERT INTO student_management_area VALUES(1,'四川省',NULL);
+INSERT INTO student_management_area VALUES(2,'攀枝花市',1);
+INSERT INTO student_management_area VALUES(3,'盐边县',2);
+INSERT INTO student_management_area VALUES(4,'米易县',2);
+INSERT INTO student_management_area VALUES(5,'仁和区',2);
+INSERT INTO student_management_area VALUES(6,'东区',2);
+INSERT INTO student_management_area VALUES(7,'渔门镇',3);
+INSERT INTO student_management_area VALUES(8,'桐子林镇',3);
+CREATE INDEX "student_management_area_parent_id_f4e77f4f" ON "student_management_area" ("parent_id");
+COMMIT;
