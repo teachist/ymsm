@@ -1,0 +1,29 @@
+- USER MODEL
+  - username
+  - email
+  - password
+  - image
+  - gender
+  - phonenumner
+
+
+- Teacher Model
+  - career
+  - descrition
+  - teach_classes
+  - coursese
+
+
+- Chef_Teacher Model
+  - management_class
+
+
+- Student Model
+  - is_under_poverty 
+  - is_disability
+  - province
+  - city
+  - district
+  - town/contryside
+  - address
+  
